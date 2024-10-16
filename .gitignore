@@ -43,6 +43,3 @@ logs/
 Thumbs.db
 ehthumbs.db
 
-# Other
-package-lock.json
-yarn.lock
