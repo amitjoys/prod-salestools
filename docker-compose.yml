@@ -7,7 +7,7 @@ services:
       args:
         VITE_BACKEND_URL: http://backend:3000 # Internal Docker network URL
     ports:
-      - "80:80" # Only expose the frontend to the public
+      - "8080:8080" # Only expose the frontend to the public
     restart: always
     depends_on:
       - backend
