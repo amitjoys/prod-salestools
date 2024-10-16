@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-transparent-white {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bg-transparent-purple {
+  background-color: rgba(88, 28, 135, 0.3);
+}

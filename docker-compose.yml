@@ -1,0 +1,22 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./replica
+      dockerfile: Dockerfile
+      args:
+        VITE_BACKEND_URL: http://backend:3000 # Internal Docker network URL
+    ports:
+      - "80:80" # Only expose the frontend to the public
+    restart: always
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./serverside
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Only expose the frontend to the public
+    restart: always
+    # No ports section here to ensure backend is not exposed publicly
