@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'purple': {
+        purple: {
           900: '#4C1D95',
           800: '#5B21B6',
           700: '#6D28D9',
