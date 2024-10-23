@@ -59,17 +59,17 @@ const App: React.FC = () => {
     <Router>
       <div className={`min-h-screen flex flex-col ${darkMode ? 'dark' : ''}`}>
         <Helmet>
-          <title>Top AI Sales Tools 2024 | ColdIQ</title>
+          <title>Top AI Sales Tools 2024 | MarketMind AI</title>
           <meta name="description" content="Discover and compare the best AI-powered sales tools of 2024. Boost your sales performance with cutting-edge AI technology. Updated daily." />
           <meta name="keywords" content="AI sales tools, sales automation, CRM, lead generation, sales analytics" />
           <meta name="author" content="ColdIQ" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta property="og:title" content="Top AI Sales Tools 2024 | ColdIQ" />
           <meta property="og:description" content="Explore the latest AI-powered sales tools to supercharge your sales process in 2024. Updated daily with the most innovative solutions." />
-          <meta property="og:image" content="https://coldprespect.publicvm.com/og-image.jpg" />
-          <meta property="og:url" content="https://coldprespect.publicvm.com" />
+          <meta property="og:image" content="https://marketmindai.com/og-image.jpg" />
+          <meta property="og:url" content="https://marketmindai.com" />
           <meta name="twitter:card" content="summary_large_image" />
-          <link rel="canonical" href="https://coldprespect.publicvm.com" />
+          <link rel="canonical" href="https://marketmindai.com" />
           <meta name="robots" content="index, follow" />
           <meta name="revisit-after" content="1 day" />
           <script type="application/ld+json">
@@ -77,9 +77,9 @@ const App: React.FC = () => {
               {
                 "@context": "http://schema.org",
                 "@type": "WebSite",
-                "name": "ColdIQ - AI Sales Tools",
-                "url": "https://coldprespect.publicvm.com",
-                "description": "Comprehensive directory of AI-powered sales tools for 2024",
+                "name": "MarketMind AI - AI Sales Tools",
+                "url": "https://MarketMindai.com",
+                "description": "Comprehensive directory of AI-powered sales tools for 2024 with Filters",
                 "dateModified": "${currentDate}"
               }
             `}
@@ -102,6 +102,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
-
