@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   return (
     <header className="bg-purple-900 bg-opacity-50 text-white shadow z-50">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-white">Cold Prospecting Leaders</Link>
+        <Link to="/" className="text-2xl font-bold text-white">MarketMind AI</Link>
         <div className="hidden md:flex items-center space-x-4">
           <button onClick={toggleDarkMode} className="text-white">
             {darkMode ? '🌞' : '🌙'}

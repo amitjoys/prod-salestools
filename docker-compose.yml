@@ -1,14 +1,25 @@
 version: '3'
+
+networks:
+  app-network:
+    driver: bridge
+
 services:
   frontend:
     build:
       context: ./replica
       dockerfile: Dockerfile
       args:
-        VITE_BACKEND_URL: http://backend:3000 # Internal Docker network URL
+        VITE_BACKEND_URL: http://backend:3000
     ports:
-      - "8080:8080" # Only expose the frontend to the public
+      - "80:80"
+      - "443:443"
     restart: always
+    volumes:
+      - /etc/letsencrypt/:/etc/letsencrypt/:ro
+      - ./certbot/www:/var/www/certbot/:ro
+    networks:
+      - app-network
     depends_on:
       - backend
 
@@ -16,7 +27,14 @@ services:
     build:
       context: ./serverside
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000" # Only expose the frontend to the public
+    expose:
+      - "3000"
     restart: always
-    # No ports section here to ensure backend is not exposed publicly
+    networks:
+      - app-network
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - /etc/letsencrypt/:/etc/letsencrypt/:rw
+      - ./certbot/www/:/var/www/certbot/:rw
